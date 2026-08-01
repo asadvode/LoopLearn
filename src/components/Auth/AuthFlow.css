@@ -1,0 +1,23 @@
+.auth-prompt {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 90;
+}
+
+.btn-auth-prompt {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, var(--primary-orange), var(--secondary-yellow));
+  border: 2px solid var(--border-dark);
+  border-radius: 12px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-auth-prompt:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
