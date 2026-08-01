@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-orange: #FF4F00;
+  --secondary-yellow: #FFCC00;
+  --secondary-blue: #1040E0;
+  --light-bg: #F7F7F2;
+  --dark-bg: #121212;
+  --light-surface: #FFFFFF;
+  --dark-surface: #1E1E1E;
+  --border-dark: #111111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: var(--light-bg);
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: #f0f0f0;
+}
+
+.btn-tactile {
+  padding: 12px 24px;
+  border: 2px solid var(--border-dark);
+  border-radius: 12px;
+  background-color: var(--primary-orange);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-tactile:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card-tactile {
+  background: var(--light-surface);
+  border: 2px solid var(--border-dark);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.2s ease;
+}
+
+.card-tactile:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode .card-tactile {
+  background: var(--dark-surface);
+}
