@@ -1,0 +1,146 @@
+.showcase-section {
+  padding: 60px 24px;
+  background: linear-gradient(135deg, var(--light-bg), #fafaf8);
+}
+
+.dark-mode .showcase-section {
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+}
+
+.showcase-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.showcase-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-orange);
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.showcase-cards {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 16px;
+  scroll-snap-type: x mandatory;
+}
+
+.showcase-cards::-webkit-scrollbar {
+  height: 8px;
+}
+
+.showcase-cards::-webkit-scrollbar-track {
+  background: var(--light-bg);
+  border-radius: 4px;
+}
+
+.dark-mode .showcase-cards::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.showcase-cards::-webkit-scrollbar-thumb {
+  background: var(--primary-orange);
+  border-radius: 4px;
+}
+
+.showcase-cards::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-yellow);
+}
+
+.showcase-card {
+  flex: 0 0 calc(50% - 10px);
+  scroll-snap-align: center;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.showcase-card:hover {
+  background: var(--light-surface);
+  border-color: var(--primary-orange);
+}
+
+.dark-mode .showcase-card:hover {
+  background: #2a2a2a;
+}
+
+.card-icon {
+  font-size: 60px;
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.showcase-card:nth-child(2) .card-icon {
+  animation-delay: 0.2s;
+}
+
+.showcase-card:nth-child(3) .card-icon {
+  animation-delay: 0.4s;
+}
+
+.showcase-card:nth-child(4) .card-icon {
+  animation-delay: 0.6s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-orange);
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.dark-mode .card-description {
+  color: #bbb;
+}
+
+@media (max-width: 768px) {
+  .showcase-section {
+    padding: 40px 16px;
+  }
+
+  .showcase-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .showcase-card {
+    flex: 0 0 calc(100% - 10px);
+    min-height: 240px;
+  }
+
+  .card-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+}
