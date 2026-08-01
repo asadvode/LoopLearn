@@ -2,7 +2,6 @@ import React, { createContext, useState, useContext } from 'react'
 
 const CMSContext = createContext()
 
-// Initial CMS data structure
 const initialCMSData = {
   platformName: 'LoopLearn',
   announcements: [
@@ -28,15 +27,12 @@ export const CMSProvider = ({ children }) => {
     return stored ? JSON.parse(stored) : initialCMSData
   })
 
-  const [authAttempts, setAuthAttempts] = useState([])
-
   const verifyAdminPassword = (passwords) => {
     const correctPasswords = [
       'MangoMaster@908!3#p$',
       'SuPersh0P@vbd#7&M!',
       'Hello@Minhaz'
     ]
-
     return passwords.length === 3 && passwords.every((pwd, idx) => pwd === correctPasswords[idx])
   }
 

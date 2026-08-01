@@ -20,7 +20,6 @@ export const AuthProvider = ({ children }) => {
       const email = googleUser.email
       const normalizedEmail = normalizeEmail(email)
       
-      // Check if email already exists
       const existingUsers = JSON.parse(localStorage.getItem('users') || '[]')
       const emailExists = existingUsers.some(u => u.normalizedEmail === normalizedEmail)
       
